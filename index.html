@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet"
+        href="css/page_basic_leo.css" type="text/css">
+        <script>
+            // Change the size of the map container automatically when user resize the window.
+            function changeTheSizeOfMap() {
+                var mapContainer = document.getElementById('window-my-map');
+                mapContainer.style.width = window.innerWidth.toString() + 'px';
+                mapContainer.style.height = (window.innerHeight-4).toString() + 'px';
+            }
+            window.onresize = changeTheSizeOfMap;
+        </script>
+
+    </head>
+    <body id='body'>
+        <div id='nav'>
+            <a class="tab-button" href="index.html" title="Corona Map">Corona Map</a>
+            <a class="tab-button" href="locationlogin.html" title="Location Sharing">Location Sharing</a>
+        </div>
+
+        <div> <iframe id='window-my-map' src="coronamap/index.html" onload="changeTheSizeOfMap()"
+            frameborder="0" scrolling="0" style="border:none;"></iframe></div>
+    </body>
+</html>
